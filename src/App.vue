@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>表单组件</h2>
     <Form ref="form" :rules="rules" :model="formData">
       <FormItem prop="username" label="账号">
         <Input type="text" placeholder="账号" v-model="formData.username" />
@@ -11,7 +12,12 @@
         <button @click="submit">提交</button>
       </FormItem>
     </Form>
-     {{formData}}
+    <h2>VueRouter</h2>
+    <div>
+        <router-link to="/">首页</router-link>
+        <router-link to="/about">关于</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
 
@@ -63,5 +69,8 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+h2 {
+    color: red;
 }
 </style>
