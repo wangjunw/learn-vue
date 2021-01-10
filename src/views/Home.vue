@@ -8,6 +8,9 @@
 
 <script>
 export default {
+    asyncData({ store }) {
+        return store.dispatch('addAsync', 100);
+    },
     methods: {
         handler() {
             this.$store.commit('add', 2);
